@@ -20,20 +20,20 @@
 	</nav>
 	
 	<section>
-		<table border="1">
-			<tr>
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성일</th>
-			</tr>
-			
-			<tr>
-				<td>1</td>
-				<td ><a href="/apple/post?cmd=detail&id=1">첫 번째 게시글</a></td>
-				<td>2020-06-18</td>
-			</tr>
-		</table>
-		<a href="/apple/post?cmd=svarForm">글쓰기</a>
+		<form action="/apple/post?cmd=saveProc" method="post">
+			<table border="1">
+				<tr>
+					<th>제목</th>
+					<td><input type="text" name="title" /></td>
+				</tr>
+				
+				<tr>
+					<th>내용</th>
+					<td><textarea rows="3" cols="22" name="content"></textarea></td>
+				</tr>
+			</table>
+			<button>글쓰기 완료</button>
+		</form>
 	</section>
 
 	<footer>
