@@ -30,7 +30,7 @@
 				<td>2020-06-18</td>
 			</tr>
 		</table>
-		<a href="/apple/post?cmd=svarForm">글쓰기</a>
+		<a href="/apple/post?cmd=saveForm">글쓰기</a>
 	</section>
 
 	<footer>
