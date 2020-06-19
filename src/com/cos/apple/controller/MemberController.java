@@ -13,7 +13,9 @@ import com.cos.apple.action.member.MemberJoinFormAction;
 import com.cos.apple.action.member.MemberJoinProcAction;
 import com.cos.apple.action.member.MemberLoginFormAction;
 import com.cos.apple.action.member.MemberLoginProcAction;
-import com.cos.apple.action.post.PostListAction;
+import com.cos.apple.action.member.MemberLogoutAction;
+import com.cos.apple.action.member.MemberUpdateFormAction;
+import com.cos.apple.action.member.MemberUpdateProcAction;
 
 // http://localhost:8000/apple/member
 @WebServlet("/member")
