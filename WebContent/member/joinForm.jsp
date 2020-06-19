@@ -17,7 +17,7 @@
 	<%@include file="/include/nav.jsp" %>
 	
 	<section>
-		<form action="/apple/post?cmd=joinProc" method="post">
+		<form action="/apple/member?cmd=joinProc" method="post">
 			<table border="1">
 				<tr>
 					<th>유저네임</th>

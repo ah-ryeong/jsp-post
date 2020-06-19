@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.cos.apple.db.DBConn;
+import com.cos.apple.model.Member;
 
 public class MemberDao {
 	
@@ -27,5 +28,29 @@ public class MemberDao {
 			e.printStackTrace();
 		}
 		return -1;
-	}
+	} // end of 회원가입
+	
+	public Member 로그인(String username, String password) {
+		try {
+			String sql = "SELECT * FROM member WHERE username =? AND password = ?";
+			conn = DBConn.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, username);
+			pstmt.setString(2, password);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				Member member = new Member();
+				member.setId(rs.getInt("id"));
+				member.setUsername(rs.getString("password"));
+				member.setEmail(rs.getString("email"));
+				member.setCreateDate(rs.getTimestamp("createDate"));
+				return member;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	} // end of 로그인 
 }

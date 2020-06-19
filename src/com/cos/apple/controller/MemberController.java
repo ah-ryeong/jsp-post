@@ -52,6 +52,12 @@ public class MemberController extends HttpServlet {
 			return new MemberLoginFormAction();
 		} else if (cmd.equals("loginProc")) {
 			return new MemberLoginProcAction();
+		} else if (cmd.equals("updateForm")) {
+			return new MemberUpdateFormAction();
+		} else if (cmd.equals("updateProc")) {
+			return new MemberUpdateProcAction();
+		} else if (cmd.equals("logout")) {
+			return new MemberLogoutAction();
 		}
 		return null;
 	}
